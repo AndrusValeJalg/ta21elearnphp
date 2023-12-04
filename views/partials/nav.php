@@ -33,16 +33,19 @@
           <a href="/admin/posts" class="navbar-item">
             Posts
           </a>
+          <a href="/admin/users" class="navbar-item">
+            Users
+          </a>
 
         </div>
       </div>
     </div>
 
     <div class="navbar-end">
-      <?php if (auth()) : ?>
+      <?php if (auth()): ?>
         <div class="navbar-item has-dropdown is-hoverable">
           <a class="navbar-link">
-            <?=auth()->email?>
+            <?= auth()->email ?>
           </a>
 
           <div class="navbar-dropdown">
@@ -51,7 +54,7 @@
             </a>
           </div>
         </div>
-      <?php else : ?>
+      <?php else: ?>
         <div class="navbar-item">
           <div class="buttons">
             <a href="/register" class="button is-primary">
